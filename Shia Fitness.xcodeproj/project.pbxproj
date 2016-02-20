@@ -12,6 +12,25 @@
 		3D8835191C785CED000547E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D8835171C785CED000547E7 /* Main.storyboard */; };
 		3D88351B1C785CED000547E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D88351A1C785CED000547E7 /* Assets.xcassets */; };
 		3D88351E1C785CED000547E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D88351C1C785CED000547E7 /* LaunchScreen.storyboard */; };
+		3D8835261C78604D000547E7 /* bg_space.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D8835251C78604D000547E7 /* bg_space.png */; };
+		3D8835291C786245000547E7 /* head.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D8835281C786245000547E7 /* head.png */; };
+		3D88352B1C7862A9000547E7 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D88352A1C7862A9000547E7 /* BackgroundView.swift */; };
+		3D88352D1C7862B8000547E7 /* ArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D88352C1C7862B8000547E7 /* ArcView.swift */; };
+		3D8835301C786379000547E7 /* SpeechPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D88352F1C786379000547E7 /* SpeechPlayer.swift */; };
+		3D8835331C786598000547E7 /* SqueezeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8835321C786598000547E7 /* SqueezeButton.swift */; };
+		3D8835341C786AA2000547E7 /* speech.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3D88352E1C7862CF000547E7 /* speech.caf */; };
+		3D8835381C7878ED000547E7 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8835351C7878ED000547E7 /* Chart.swift */; };
+		3D8835391C7878ED000547E7 /* ChartColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8835361C7878ED000547E7 /* ChartColors.swift */; };
+		3D88353A1C7878ED000547E7 /* ChartSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8835371C7878ED000547E7 /* ChartSeries.swift */; };
+		3D88353D1C7880F9000547E7 /* HealthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D88353C1C7880F9000547E7 /* HealthController.swift */; };
+		3D8835421C78954A000547E7 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D8835411C78954A000547E7 /* HealthKit.framework */; };
+		3D8835441C7895A5000547E7 /* MotionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8835431C7895A5000547E7 /* MotionController.swift */; };
+		3D8835461C78A1E3000547E7 /* an_x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D8835451C78A1E3000547E7 /* an_x.png */; };
+		3D8835481C78A1FF000547E7 /* XView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8835471C78A1FF000547E7 /* XView.swift */; };
+		3D88354A1C78AC42000547E7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D8835491C78AC42000547E7 /* AudioToolbox.framework */; };
+		3D88354C1C78BA62000547E7 /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D88354B1C78BA62000547E7 /* LocationController.swift */; };
+		3D88354E1C78BBD2000547E7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D88354D1C78BBD2000547E7 /* CoreLocation.framework */; };
+		3D8835521C78F2A1000547E7 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D8835511C78F2A1000547E7 /* heart.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +41,26 @@
 		3D88351A1C785CED000547E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D88351D1C785CED000547E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D88351F1C785CED000547E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D8835251C78604D000547E7 /* bg_space.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_space.png; sourceTree = "<group>"; };
+		3D8835281C786245000547E7 /* head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head.png; sourceTree = "<group>"; };
+		3D88352A1C7862A9000547E7 /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		3D88352C1C7862B8000547E7 /* ArcView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArcView.swift; sourceTree = "<group>"; };
+		3D88352E1C7862CF000547E7 /* speech.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = speech.caf; sourceTree = "<group>"; };
+		3D88352F1C786379000547E7 /* SpeechPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechPlayer.swift; sourceTree = "<group>"; };
+		3D8835321C786598000547E7 /* SqueezeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SqueezeButton.swift; sourceTree = "<group>"; };
+		3D8835351C7878ED000547E7 /* Chart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
+		3D8835361C7878ED000547E7 /* ChartColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartColors.swift; sourceTree = "<group>"; };
+		3D8835371C7878ED000547E7 /* ChartSeries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartSeries.swift; sourceTree = "<group>"; };
+		3D88353C1C7880F9000547E7 /* HealthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthController.swift; sourceTree = "<group>"; };
+		3D8835401C78953C000547E7 /* Shia Fitness.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Shia Fitness.entitlements"; sourceTree = "<group>"; };
+		3D8835411C78954A000547E7 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		3D8835431C7895A5000547E7 /* MotionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionController.swift; sourceTree = "<group>"; };
+		3D8835451C78A1E3000547E7 /* an_x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = an_x.png; sourceTree = "<group>"; };
+		3D8835471C78A1FF000547E7 /* XView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XView.swift; sourceTree = "<group>"; };
+		3D8835491C78AC42000547E7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		3D88354B1C78BA62000547E7 /* LocationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
+		3D88354D1C78BBD2000547E7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3D8835511C78F2A1000547E7 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +68,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D88354E1C78BBD2000547E7 /* CoreLocation.framework in Frameworks */,
+				3D8835421C78954A000547E7 /* HealthKit.framework in Frameworks */,
+				3D88354A1C78AC42000547E7 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +80,9 @@
 		3D8835071C785CEC000547E7 = {
 			isa = PBXGroup;
 			children = (
+				3D88354D1C78BBD2000547E7 /* CoreLocation.framework */,
+				3D8835491C78AC42000547E7 /* AudioToolbox.framework */,
+				3D8835411C78954A000547E7 /* HealthKit.framework */,
 				3D8835121C785CED000547E7 /* Shia Fitness */,
 				3D8835111C785CED000547E7 /* Products */,
 			);
@@ -54,14 +99,55 @@
 		3D8835121C785CED000547E7 /* Shia Fitness */ = {
 			isa = PBXGroup;
 			children = (
+				3D8835401C78953C000547E7 /* Shia Fitness.entitlements */,
 				3D8835131C785CED000547E7 /* AppDelegate.swift */,
 				3D8835151C785CED000547E7 /* ViewController.swift */,
 				3D8835171C785CED000547E7 /* Main.storyboard */,
+				3D8835471C78A1FF000547E7 /* XView.swift */,
+				3D88352A1C7862A9000547E7 /* BackgroundView.swift */,
+				3D88352C1C7862B8000547E7 /* ArcView.swift */,
+				3D8835321C786598000547E7 /* SqueezeButton.swift */,
+				3D88353B1C7878F3000547E7 /* Chart */,
+				3D8835311C786385000547E7 /* non-visual */,
 				3D88351A1C785CED000547E7 /* Assets.xcassets */,
+				3D8835271C786051000547E7 /* Assets */,
 				3D88351C1C785CED000547E7 /* LaunchScreen.storyboard */,
 				3D88351F1C785CED000547E7 /* Info.plist */,
 			);
 			path = "Shia Fitness";
+			sourceTree = "<group>";
+		};
+		3D8835271C786051000547E7 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				3D8835511C78F2A1000547E7 /* heart.png */,
+				3D88352E1C7862CF000547E7 /* speech.caf */,
+				3D8835281C786245000547E7 /* head.png */,
+				3D8835251C78604D000547E7 /* bg_space.png */,
+				3D8835451C78A1E3000547E7 /* an_x.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		3D8835311C786385000547E7 /* non-visual */ = {
+			isa = PBXGroup;
+			children = (
+				3D88354B1C78BA62000547E7 /* LocationController.swift */,
+				3D8835431C7895A5000547E7 /* MotionController.swift */,
+				3D88353C1C7880F9000547E7 /* HealthController.swift */,
+				3D88352F1C786379000547E7 /* SpeechPlayer.swift */,
+			);
+			name = "non-visual";
+			sourceTree = "<group>";
+		};
+		3D88353B1C7878F3000547E7 /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				3D8835351C7878ED000547E7 /* Chart.swift */,
+				3D8835361C7878ED000547E7 /* ChartColors.swift */,
+				3D8835371C7878ED000547E7 /* ChartSeries.swift */,
+			);
+			name = Chart;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +182,18 @@
 				TargetAttributes = {
 					3D88350F1C785CED000547E7 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = FNU3YT2Q2N;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -122,9 +220,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D8835521C78F2A1000547E7 /* heart.png in Resources */,
 				3D88351E1C785CED000547E7 /* LaunchScreen.storyboard in Resources */,
+				3D8835291C786245000547E7 /* head.png in Resources */,
 				3D88351B1C785CED000547E7 /* Assets.xcassets in Resources */,
 				3D8835191C785CED000547E7 /* Main.storyboard in Resources */,
+				3D8835341C786AA2000547E7 /* speech.caf in Resources */,
+				3D8835261C78604D000547E7 /* bg_space.png in Resources */,
+				3D8835461C78A1E3000547E7 /* an_x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +238,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D8835391C7878ED000547E7 /* ChartColors.swift in Sources */,
+				3D88353D1C7880F9000547E7 /* HealthController.swift in Sources */,
+				3D88352B1C7862A9000547E7 /* BackgroundView.swift in Sources */,
+				3D8835381C7878ED000547E7 /* Chart.swift in Sources */,
+				3D88353A1C7878ED000547E7 /* ChartSeries.swift in Sources */,
+				3D88352D1C7862B8000547E7 /* ArcView.swift in Sources */,
+				3D8835331C786598000547E7 /* SqueezeButton.swift in Sources */,
 				3D8835161C785CED000547E7 /* ViewController.swift in Sources */,
 				3D8835141C785CED000547E7 /* AppDelegate.swift in Sources */,
+				3D88354C1C78BA62000547E7 /* LocationController.swift in Sources */,
+				3D8835481C78A1FF000547E7 /* XView.swift in Sources */,
+				3D8835441C7895A5000547E7 /* MotionController.swift in Sources */,
+				3D8835301C786379000547E7 /* SpeechPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,10 +361,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Shia Fitness/Shia Fitness.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Shia Fitness/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "omaralejel.Shia-Fitness";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -258,10 +377,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Shia Fitness/Shia Fitness.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Shia Fitness/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "omaralejel.Shia-Fitness";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -284,6 +408,7 @@
 				3D8835241C785CED000547E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
