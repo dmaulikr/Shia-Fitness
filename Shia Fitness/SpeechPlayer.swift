@@ -42,7 +42,7 @@ class SpeechPlayer: NSObject {
             
         }
         
-        standardTimer = NSTimer.scheduledTimerWithTimeInterval(40, target: self, selector: Selector("newQuote"), userInfo: nil, repeats: true)
+        standardTimer = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: Selector("newQuote"), userInfo: nil, repeats: true)
     }
     
     func newQuote() {

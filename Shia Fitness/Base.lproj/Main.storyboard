@@ -78,19 +78,35 @@
                                     <constraint firstAttribute="width" constant="60" id="TaG-33-zrS"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hG6-im-I0k" customClass="Chart" customModule="Shia_Fitness" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="364" width="600" height="193"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5U-iO-WOe">
+                                        <rect key="frame" x="-12" y="86" width="54" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="U5U-iO-WOe" firstAttribute="centerY" secondItem="hG6-im-I0k" secondAttribute="centerY" id="OgJ-86-mQu"/>
+                                    <constraint firstAttribute="height" constant="193" id="Om1-Dh-BiS"/>
+                                    <constraint firstItem="U5U-iO-WOe" firstAttribute="leading" secondItem="hG6-im-I0k" secondAttribute="leading" constant="-12" id="gBQ-rf-Th5"/>
+                                </constraints>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="~" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6iv-DP-pdV">
                                 <rect key="frame" x="295" y="316" width="10" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hG6-im-I0k" customClass="Chart" customModule="Shia_Fitness" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="364" width="600" height="193"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="193" id="Om1-Dh-BiS"/>
-                                </constraints>
-                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6mT-uH-HZu">
+                                <rect key="frame" x="281" y="559" width="38" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -104,7 +120,7 @@
                             <constraint firstItem="hG6-im-I0k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HTt-Hc-Sg0"/>
                             <constraint firstItem="TkO-Ak-gVK" firstAttribute="width" secondItem="TkO-Ak-gVK" secondAttribute="height" multiplier="421:372" id="KJU-R5-xo0"/>
                             <constraint firstAttribute="trailing" secondItem="hG6-im-I0k" secondAttribute="trailing" id="Kct-mg-gvH"/>
-                            <constraint firstItem="hG6-im-I0k" firstAttribute="top" secondItem="Dbw-2x-jLV" secondAttribute="bottom" constant="163" id="Ofu-tn-mtI"/>
+                            <constraint firstItem="hG6-im-I0k" firstAttribute="top" secondItem="Dbw-2x-jLV" secondAttribute="bottom" constant="162" id="Ofu-tn-mtI"/>
                             <constraint firstItem="M0M-cA-JbS" firstAttribute="top" secondItem="Iyp-ck-zIz" secondAttribute="bottom" constant="1" id="QPC-jo-ApW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Dbw-2x-jLV" secondAttribute="trailing" constant="8" id="QS4-sF-4f3"/>
                             <constraint firstItem="GD0-m3-rvI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="7" id="SX9-wP-0sU"/>
@@ -112,6 +128,7 @@
                             <constraint firstItem="hG6-im-I0k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WhM-w1-MQR"/>
                             <constraint firstItem="Iyp-ck-zIz" firstAttribute="leading" secondItem="pjr-Ff-18q" secondAttribute="leading" constant="11" id="XDg-cD-Bjw"/>
                             <constraint firstAttribute="trailing" secondItem="pjr-Ff-18q" secondAttribute="trailing" constant="17" id="XKF-Jx-zDP"/>
+                            <constraint firstItem="6mT-uH-HZu" firstAttribute="top" secondItem="hG6-im-I0k" secondAttribute="bottom" constant="2" id="Y3n-Fs-ThQ"/>
                             <constraint firstItem="TkO-Ak-gVK" firstAttribute="top" secondItem="6iv-DP-pdV" secondAttribute="bottom" constant="-34" id="YEt-0j-Kh5"/>
                             <constraint firstItem="62v-h9-6cS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YtK-Yf-MTY"/>
                             <constraint firstItem="62v-h9-6cS" firstAttribute="top" secondItem="Dbw-2x-jLV" secondAttribute="bottom" constant="8" id="Zkl-tR-5Ne"/>
@@ -121,6 +138,7 @@
                             <constraint firstItem="pjr-Ff-18q" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="75" id="bRN-hO-I9s"/>
                             <constraint firstItem="TkO-Ak-gVK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c1m-PN-dTA"/>
                             <constraint firstItem="Iyp-ck-zIz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="19" id="fEH-Fo-fJu"/>
+                            <constraint firstItem="6mT-uH-HZu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xjT-mb-JwS"/>
                         </constraints>
                     </view>
                     <connections>
@@ -134,6 +152,7 @@
                         <outlet property="startButton" destination="Dbw-2x-jLV" id="Pfm-fL-n9d"/>
                         <outlet property="stepsLabel" destination="hiF-Bq-aud" id="D6e-hs-eEE"/>
                         <outlet property="timeLabel" destination="62v-h9-6cS" id="fH2-tK-H8v"/>
+                        <outlet property="yLabel" destination="U5U-iO-WOe" id="JvX-sZ-AdR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

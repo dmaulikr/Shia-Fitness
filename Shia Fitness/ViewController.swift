@@ -27,6 +27,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var stepsLabel: UILabel!
     @IBOutlet weak var saysLabel: UILabel!
     
+    @IBOutlet weak var yLabel: UILabel!
     var standardTimer: NSTimer!
     
     @IBOutlet weak var dataChart: Chart!
@@ -59,12 +60,12 @@ class ViewController: UIViewController {
         view.insertSubview(bgView, atIndex: 0)
         
         startButton.layer.cornerRadius = 6
+
+        quoteLabel.adjustsFontSizeToFitWidth = true
         
         xV = XView(frame: bounds)
         xV.alpha = 0
         view.addSubview(xV)
-        
-        quoteLabel.adjustsFontSizeToFitWidth = true
         
         let series = ChartSeries(data: [(x: 0.0, y: 0.0)])
         series.color = UIColor.whiteColor()
@@ -78,14 +79,11 @@ class ViewController: UIViewController {
         dataChart.userInteractionEnabled = false
         animateHeartWithRate(60)
         
-        
         motionController = MotionController(delegate: self)
         locationController = LocationController(noteDelegate: self)
         healthController = HealthController(delegate: self)
+        yLabel.transform = CGAffineTransformRotate(yLabel.transform, CGFloat(-0.5 * M_PI))
     }
-    
-    
-
     
     override func viewDidAppear(animated: Bool) {
         let anim = CAKeyframeAnimation(keyPath: "position")
@@ -139,12 +137,14 @@ class ViewController: UIViewController {
             motionController.start()
             locationController.startUpdatingLocation()
             startDate = NSDate()
-            locationController.totalDistance = 0
             
+            locationController.totalDistance = 0
             //watch out not to clear the info
+            locationData = [(x: 0.0, y: 0.0)]
             let series = ChartSeries(data: [(x: 0.0, y: 0.0)])
             series.color = UIColor.whiteColor()
             dataChart.addSeries(series)
+            dataChart.setNeedsDisplay()
         } else {
             startButton.setTitle("Start Workout", forState: .Normal)
             startButton.backgroundColor = UIColor.whiteColor()
@@ -163,6 +163,7 @@ class ViewController: UIViewController {
             self.xV.alpha = 0
         }
     }
+    
     func setInSufficient() {
         UIView.animateWithDuration(1) { () -> Void in
             self.xV?.alpha = 1
