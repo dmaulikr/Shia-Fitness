@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIScrollViewDelegate {
     
     let bounds = UIScreen.mainScreen().bounds
 
@@ -44,9 +44,15 @@ class ViewController: UIViewController {
     var minutes = 0
     var seconds = 0
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     var motionController: MotionController!
     var locationController: LocationController!
     var healthController: HealthController!
+    
+    @IBOutlet weak var pageControl: UIPageControl!
+    
+    var resultController: ResultController!
     
     var xV: XView!
     var shrunk = false
@@ -83,6 +89,8 @@ class ViewController: UIViewController {
         locationController = LocationController(noteDelegate: self)
         healthController = HealthController(delegate: self)
         yLabel.transform = CGAffineTransformRotate(yLabel.transform, CGFloat(-0.5 * M_PI))
+        
+        scrollView.delegate = self
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -92,6 +100,26 @@ class ViewController: UIViewController {
         anim.repeatCount = HUGE
         anim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
         headImageView.layer.addAnimation(anim, forKey: "position")
+        
+        let f = scrollView.frame
+        scrollView.contentSize = CGSizeMake(f.size.width * 2, f.size.height)
+        
+        var newF = f
+        newF.origin.x = f.size.width
+        newF.origin.y = 0
+        resultController = ResultController()
+        resultController.delegate = self
+        resultController.view.frame = newF
+        addChildViewController(resultController)
+        scrollView.addSubview(resultController.view)
+    }
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        if scrollView.contentOffset.x == 0 {
+            pageControl.currentPage = 0
+        } else {
+            pageControl.currentPage = 1
+        }
     }
     
     func updateQuoteLabelWithSoundIndex(i: Int) {
@@ -138,13 +166,6 @@ class ViewController: UIViewController {
             locationController.startUpdatingLocation()
             startDate = NSDate()
             
-            locationController.totalDistance = 0
-            //watch out not to clear the info
-            locationData = [(x: 0.0, y: 0.0)]
-            let series = ChartSeries(data: [(x: 0.0, y: 0.0)])
-            series.color = UIColor.whiteColor()
-            dataChart.addSeries(series)
-            dataChart.setNeedsDisplay()
         } else {
             startButton.setTitle("Start Workout", forState: .Normal)
             startButton.backgroundColor = UIColor.whiteColor()
@@ -154,6 +175,46 @@ class ViewController: UIViewController {
             motionController.stop()
             setSufficient()
             locationController.stopUpdatingLocation()
+            
+            var s1 = "Weak"
+            var s2 = "Impatient"
+            var s3 = "Unfocused"
+            
+            switch locationController.totalDistance {
+            case let x where x > 1000:
+                s1 = "Strong"
+            case let x where x > 500:
+                s1 = "Moderate"
+            default:
+                break
+            }
+            
+            switch minutes {
+            case let x where x > 10:
+                s2 = "Patient"
+            case let x where x > 5:
+                s2 = "~patient"
+            default:
+                break
+            }
+            
+            switch motionController.stepCount {
+            case let x where x > 500:
+                s3 = "Focused"
+            case let x where x > 150:
+                s3 = "Committed"
+            default:
+                break
+            }
+            
+            
+            resultController.legLabel.text = s1
+            resultController.headLabel.text = s2
+            resultController.heartLabel.text = s3
+            
+            UIView.animateWithDuration(0.5, animations: { () -> Void in
+                self.scrollView.contentOffset.x = self.scrollView.frame.size.width
+            })
         }
     }
 
@@ -205,6 +266,32 @@ class ViewController: UIViewController {
             })
             
             }, completion: nil)
+    }
+    
+    func clearData() {
+        //////
+        locationController.totalDistance = 0
+        //watch out not to clear the info
+        locationData = [(x: 0.0, y: 0.0)]
+        let series = ChartSeries(data: [(x: 0.0, y: 0.0)])
+        series.color = UIColor.whiteColor()
+        dataChart.addSeries(series)
+        dataChart.setNeedsDisplay()
+        
+        ////
+        timeLabel.text = "Elapsed Time: 00:00"
+        minutes = 0
+        seconds = 0
+        
+        stepsLabel.text = "Steps: 0"
+        motionController.stepCount = 0
+        
+        locationController.oldLocation = nil
+        locationController.totalDistance = 0
+    }
+    
+    func saveData() {
+        healthController.saveRunningWorkout()
     }
     
 }

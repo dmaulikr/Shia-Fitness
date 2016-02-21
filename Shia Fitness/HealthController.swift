@@ -95,5 +95,12 @@ class HealthController: NSObject {
             }
         }
     }
+    
+    func saveRunningWorkout() {
+        let wo = HKWorkout(activityType: HKWorkoutActivityType.Running, startDate: delegate.startDate, endDate: NSDate(), duration: NSDate().timeIntervalSinceDate(delegate.startDate), totalEnergyBurned: nil, totalDistance: HKQuantity(unit: HKUnit.meterUnit(), doubleValue: delegate.locationController.totalDistance), metadata: nil)
+        store.saveObject(wo) { (done, err) -> Void in
+            print("hay un error?:\(err)")
+        }
+    }
 }
     
