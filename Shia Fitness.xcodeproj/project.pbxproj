@@ -30,7 +30,7 @@
 		3D88354A1C78AC42000547E7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D8835491C78AC42000547E7 /* AudioToolbox.framework */; };
 		3D88354C1C78BA62000547E7 /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D88354B1C78BA62000547E7 /* LocationController.swift */; };
 		3D88354E1C78BBD2000547E7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D88354D1C78BBD2000547E7 /* CoreLocation.framework */; };
-		3D8835521C78F2A1000547E7 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D8835511C78F2A1000547E7 /* heart.png */; };
+		3D8835541C792318000547E7 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D8835531C792318000547E7 /* heart.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,7 +60,7 @@
 		3D8835491C78AC42000547E7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		3D88354B1C78BA62000547E7 /* LocationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
 		3D88354D1C78BBD2000547E7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		3D8835511C78F2A1000547E7 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
+		3D8835531C792318000547E7 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +120,7 @@
 		3D8835271C786051000547E7 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				3D8835511C78F2A1000547E7 /* heart.png */,
+				3D8835531C792318000547E7 /* heart.png */,
 				3D88352E1C7862CF000547E7 /* speech.caf */,
 				3D8835281C786245000547E7 /* head.png */,
 				3D8835251C78604D000547E7 /* bg_space.png */,
@@ -220,7 +220,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D8835521C78F2A1000547E7 /* heart.png in Resources */,
+				3D8835541C792318000547E7 /* heart.png in Resources */,
 				3D88351E1C785CED000547E7 /* LaunchScreen.storyboard in Resources */,
 				3D8835291C786245000547E7 /* head.png in Resources */,
 				3D88351B1C785CED000547E7 /* Assets.xcassets in Resources */,

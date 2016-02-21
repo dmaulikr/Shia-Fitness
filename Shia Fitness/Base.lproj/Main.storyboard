@@ -78,8 +78,14 @@
                                     <constraint firstAttribute="width" constant="60" id="TaG-33-zrS"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hG6-im-I0k" customClass="Chart" customModule="Shia_Fitness" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="365" width="600" height="193"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="~" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6iv-DP-pdV">
+                                <rect key="frame" x="295" y="316" width="10" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hG6-im-I0k" customClass="Chart" customModule="Shia_Fitness" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="364" width="600" height="193"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="193" id="Om1-Dh-BiS"/>
@@ -106,8 +112,10 @@
                             <constraint firstItem="hG6-im-I0k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WhM-w1-MQR"/>
                             <constraint firstItem="Iyp-ck-zIz" firstAttribute="leading" secondItem="pjr-Ff-18q" secondAttribute="leading" constant="11" id="XDg-cD-Bjw"/>
                             <constraint firstAttribute="trailing" secondItem="pjr-Ff-18q" secondAttribute="trailing" constant="17" id="XKF-Jx-zDP"/>
+                            <constraint firstItem="TkO-Ak-gVK" firstAttribute="top" secondItem="6iv-DP-pdV" secondAttribute="bottom" constant="-34" id="YEt-0j-Kh5"/>
                             <constraint firstItem="62v-h9-6cS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YtK-Yf-MTY"/>
                             <constraint firstItem="62v-h9-6cS" firstAttribute="top" secondItem="Dbw-2x-jLV" secondAttribute="bottom" constant="8" id="Zkl-tR-5Ne"/>
+                            <constraint firstItem="6iv-DP-pdV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b5J-EX-Q4j"/>
                             <constraint firstItem="pjr-Ff-18q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="17" id="b6S-g5-zqq"/>
                             <constraint firstItem="hiF-Bq-aud" firstAttribute="top" secondItem="62v-h9-6cS" secondAttribute="bottom" constant="8" id="bG5-s1-eKA"/>
                             <constraint firstItem="pjr-Ff-18q" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="75" id="bRN-hO-I9s"/>
@@ -117,6 +125,7 @@
                     </view>
                     <connections>
                         <outlet property="arcBG" destination="pjr-Ff-18q" id="ejS-zB-NcT"/>
+                        <outlet property="bpmLabel" destination="6iv-DP-pdV" id="Y1n-nW-MWQ"/>
                         <outlet property="dataChart" destination="hG6-im-I0k" id="UB7-Iz-QeH"/>
                         <outlet property="headImageView" destination="GD0-m3-rvI" id="boW-0f-MDi"/>
                         <outlet property="heartImageView" destination="TkO-Ak-gVK" id="kYJ-B7-nFH"/>
@@ -134,6 +143,6 @@
     </scenes>
     <resources>
         <image name="head.png" width="180" height="180"/>
-        <image name="heart.png" width="421" height="372"/>
+        <image name="heart.png" width="200" height="177"/>
     </resources>
 </document>

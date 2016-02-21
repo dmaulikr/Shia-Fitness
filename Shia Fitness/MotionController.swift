@@ -16,7 +16,7 @@ class MotionController: CMMotionManager {
     var sufficientMovement = false {
         didSet {
             if oldValue != sufficientMovement {
-                print("SEEETTTT")
+//                print("SEEETTTT")
                 if sufficientMovement {
                     delegate.setSufficient()
                 } else {

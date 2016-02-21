@@ -14,7 +14,9 @@ class LocationController: CLLocationManager, CLLocationManagerDelegate {
     
     var totalDistance: CLLocationDistance = 0 {
         didSet {
-            noteDelegate.updateDistance()
+            if totalDistance - oldValue > 1 {
+                noteDelegate.updateDistance()
+            }
         }
     }
     
@@ -29,7 +31,6 @@ class LocationController: CLLocationManager, CLLocationManagerDelegate {
         desiredAccuracy = kCLLocationAccuracyBest
         activityType = CLActivityType.Fitness
         distanceFilter = 10
-        
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

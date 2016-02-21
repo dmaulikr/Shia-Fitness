@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     
     var speechPlayer: SpeechPlayer!
     
+    @IBOutlet weak var bpmLabel: UILabel!
     @IBOutlet weak var stepsLabel: UILabel!
     @IBOutlet weak var saysLabel: UILabel!
     
@@ -51,9 +52,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        motionController = MotionController(delegate: self)
-        locationController = LocationController(noteDelegate: self)
-        healthController = HealthController(delegate: self)
         
         // Do any additional setup after loading the view, typically from a nib.
         speechPlayer = SpeechPlayer(delegate: self)
@@ -77,7 +75,13 @@ class ViewController: UIViewController {
         dataChart.labelColor = UIColor.whiteColor()
         dataChart.lineWidth = 3
         dataChart.highlightLineColor = UIColor.whiteColor()
+        dataChart.userInteractionEnabled = false
         animateHeartWithRate(60)
+        
+        
+        motionController = MotionController(delegate: self)
+        locationController = LocationController(noteDelegate: self)
+        healthController = HealthController(delegate: self)
     }
     
     
@@ -135,7 +139,12 @@ class ViewController: UIViewController {
             motionController.start()
             locationController.startUpdatingLocation()
             startDate = NSDate()
-            animateHeartWithRate(120)
+            locationController.totalDistance = 0
+            
+            //watch out not to clear the info
+            let series = ChartSeries(data: [(x: 0.0, y: 0.0)])
+            series.color = UIColor.whiteColor()
+            dataChart.addSeries(series)
         } else {
             startButton.setTitle("Start Workout", forState: .Normal)
             startButton.backgroundColor = UIColor.whiteColor()
@@ -156,7 +165,7 @@ class ViewController: UIViewController {
     }
     func setInSufficient() {
         UIView.animateWithDuration(1) { () -> Void in
-            self.xV.alpha = 1
+            self.xV?.alpha = 1
         }
         speechPlayer.newQuote()
     }
@@ -169,7 +178,7 @@ class ViewController: UIViewController {
         let x = NSDate().timeIntervalSinceDate(startDate)
         let y = locationController.totalDistance
         locationData.append((x: x, y: y))
-            dataChart.removeSeries()
+        dataChart.removeSeries()
         let ser = ChartSeries(data: locationData)
         ser.color = UIColor.whiteColor()
         dataChart.addSeries(ser)
@@ -177,13 +186,14 @@ class ViewController: UIViewController {
     }
     
     func animateHeartWithRate(rate: Float) {
+        bpmLabel.text = "\(Int(rate))"
         let beatTime = NSTimeInterval(60 / rate)
+        print("new rate is: \(rate)")
         //let inTime = NSTimeInterval(0.8 * beatTime)
         //let outTime = NSTimeInterval(0.2 * beatTime)
         
         UIView.animateKeyframesWithDuration(beatTime, delay: 0, options: UIViewKeyframeAnimationOptions.Repeat, animations: { () -> Void in
             //in
-            
             
             UIView.addKeyframeWithRelativeStartTime(0, relativeDuration: 0.7, animations: { () -> Void in
                 self.heartImageView.transform = CGAffineTransformScale(self.heartImageView.transform, 0.9, 0.9)
