@@ -30,7 +30,7 @@ class LocationController: CLLocationManager, CLLocationManagerDelegate {
         requestAlwaysAuthorization()
         desiredAccuracy = kCLLocationAccuracyBest
         activityType = CLActivityType.Fitness
-        distanceFilter = 10
+        distanceFilter = 12
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
